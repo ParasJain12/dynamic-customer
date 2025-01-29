@@ -1,0 +1,46 @@
+<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="file://D:/sandbox/moqui-framework/framework/xsd/entity-definition-3.xsd"
+          xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/moqui-conf-3.xsd">
+
+    <view-entity entity-name="FindCustomerView" package="moqui.customerview">
+        <member-entity entity-alias="PTY" entity-name="moqui.party.Party"/>
+        <member-entity entity-alias="PTRL" entity-name="moqui.partyrole.PartyRole" join-from-alias="PTY">
+            <key-map field-name="partyId"/>
+        </member-entity>
+        <member-entity entity-alias="ORG" entity-name="moqui.organization.Organization" join-from-alias="PTY">
+            <key-map field-name="partyId"/>
+        </member-entity>
+        <member-entity entity-alias="PER" entity-name="moqui.person.Person" join-from-alias="PTY">
+            <key-map field-name="partyId"/>
+        </member-entity>
+        <member-entity entity-alias="PAPCM" entity-name="moqui.partycontactmech.PartyContactMech" join-from-alias="PTY">
+            <key-map field-name="partyId"/>
+        </member-entity>
+        <member-entity entity-alias="PADR" entity-name="moqui.postaladdress.PostalAddress" join-from-alias="PAPCM" join-optional="true">
+            <key-map field-name="contactMechId"/>
+        </member-entity>
+        <member-entity entity-alias="TELNM" entity-name="moqui.telecomnumber.TelecomNumber" join-from-alias="PAPCM" join-optional="true">
+            <key-map field-name="contactMechId"/>
+        </member-entity>
+        <member-entity entity-alias="EMCM" entity-name="moqui.contactmech.ContactMech" join-from-alias="PAPCM">
+            <key-map field-name="contactMechId"/>
+        </member-entity>
+
+        <alias entity-alias="PTY" name="partyId"/>
+        <alias entity-alias="PTY" name="partyTypeEnumId"/>
+        <alias entity-alias="PTRL" name="roleTypeId"/>
+        <alias entity-alias="ORG" name="organizationName"/>
+        <alias entity-alias="PER" name="firstName"/>
+        <alias entity-alias="PER" name="lastName"/>
+        <alias entity-alias="PER" name="birthDate"/>
+        <alias entity-alias="PADR" name="address1"/>
+        <alias entity-alias="PADR" name="address2"/>
+        <alias entity-alias="PADR" name="city"/>
+        <alias entity-alias="PADR" name="postalCode"/>
+        <alias entity-alias="TELNM" name="countryCode"/>
+        <alias entity-alias="TELNM" name="areaCode"/>
+        <alias entity-alias="TELNM" name="contactNumber"/>
+
+    </view-entity>
+
+</entities>

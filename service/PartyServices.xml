@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchema="http://moqui.org/service-definition-3.xsd">
+
+    <service verb="find" noun="Customer" type="script" location="component://dynamic-customer/script/FindCustomer.groovy">
+        <in-parameters>
+            <parameter name="firstName" entity="moqui.customerview.FindCustomerView"/>
+            <parameter name="lastName" entity="moqui.customerview.FindCustomerView"/>
+            <parameter name="infoString" entity="moqui.customerview.FindCustomerView"/>
+            <parameter name="contactNumber" entity="moqui.customerview.FindCustomerView"/>
+            <parameter name="countryCode" entity="moqui.customerview.FindCustomerView"/>
+            <parameter name="areaCode" entity="moqui.customerview.FindCustomerView"/>
+            <parameter name="address1" entity="moqui.customerview.FindCustomerView"/>
+            <parameter name="address2" entity="moqui.customerview.FindCustomerView"/>
+            <parameter name="city" entity="moqui.customerview.FindCustomerView"/>
+            <parameter name="postalCode" entity="moqui.customerview.FindCustomerView"/>
+        </in-parameters>
+        <out-parameters>
+            <parameter name="partyIdList" type="list"/>
+        </out-parameters>
+    </service>
+</services>
