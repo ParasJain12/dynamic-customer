@@ -1,0 +1,10 @@
+<entity-facade-xml type="demo">
+    <moqui.contactmech.ContactMech contactMechId="1000" contactMechTypeEnumId="TelecomNumber"/>
+    <moqui.contactmech.ContactMech contactMechId="1001" contactMechTypeEnumId="PostalAddress"/>
+    <moqui.contactmech.ContactMech contactMechId="1002" contactMechTypeEnumId="EmailAddress" infoString="info@gmail.com"/>
+    <moqui.contactmech.ContactMech contactMechId="1003" contactMechTypeEnumId="TelecomNumber"/>
+    <moqui.contactmech.ContactMech contactMechId="1004" contactMechTypeEnumId="TelecomNumber"/>
+    <moqui.contactmech.ContactMech contactMechId="1005" contactMechTypeEnumId="PostalAddress"/>
+    <moqui.contactmech.ContactMech contactMechId="1006" contactMechTypeEnumId="PostalAddress"/>
+    <moqui.contactmech.ContactMech contactMechId="1007" contactMechTypeEnumId="EmailAddress" infoString="example@gmail.com"/>
+</entity-facade-xml>

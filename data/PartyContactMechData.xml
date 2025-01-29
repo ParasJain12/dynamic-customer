@@ -1,0 +1,9 @@
+<entity-facade-xml type="demo">
+    <moqui.partycontactmech.PartyContactMech partyId="PER100" contactMechId="1000" contactMechPurposeId="HOME" fromDate="2020-09-18" thruDate="2025-01-20"/>
+    <moqui.partycontactmech.PartyContactMech partyId="PER101" contactMechId="1001" contactMechPurposeId="HOME" fromDate="2021-01-01" thruDate="2024-02-20"/>
+    <moqui.partycontactmech.PartyContactMech partyId="PER102" contactMechId="1002" contactMechPurposeId="OFFICE" fromDate="2019-02-01" thruDate="2023-03-14"/>
+    <moqui.partycontactmech.PartyContactMech partyId="PER103" contactMechId="1003" contactMechPurposeId="WORK" fromDate="2023-03-13" thruDate="2025-01-10"/>
+    <moqui.partycontactmech.PartyContactMech partyId="ORG001" contactMechId="1004" contactMechPurposeId="WORK" fromDate="2024-04-08" thruDate="2024-11-09"/>
+    <moqui.partycontactmech.PartyContactMech partyId="ORG002" contactMechId="1005" contactMechPurposeId="WORK" fromDate="2008-05-18" thruDate="2019-12-15"/>
+    <moqui.partycontactmech.PartyContactMech partyId="ORG003" contactMechId="1006" contactMechPurposeId="OFFICE" fromDate="2017-06-09" thruDate="2018-05-30"/>
+</entity-facade-xml>

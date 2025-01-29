@@ -1,0 +1,6 @@
+<entity-facade-xml type="demo">
+    <moqui.organization.Organization partyId="ORG001" organizationName="SVVV"/>
+    <moqui.organization.Organization partyId="ORG002" organizationName="Medicaps"/>
+    <moqui.organization.Organization partyId="ORG003" organizationName="Acropolis"/>
+    <moqui.organization.Organization partyId="ORG004" organizationName="CDGI"/>
+</entity-facade-xml>

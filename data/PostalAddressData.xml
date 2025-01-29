@@ -1,0 +1,5 @@
+<entity-facade-xml type="demo">
+    <moqui.postaladdress.PostalAddress contactMechId="1001" toName="Pawan Mali" attnName="Home" address1="Vijay Nagar" address2="Sayaji Square" city="Indore" postalCode="452004"/>
+    <moqui.postaladdress.PostalAddress contactMechId="1005" toName="Om Baraskar" attnName="Home" address1="Bhawarkua" address2="Near Kotilya Academy" city="Indore" postalCode="452008"/>
+    <moqui.postaladdress.PostalAddress contactMechId="1006" toName="Sujal Kashyap" attnName="Work" address1="Palasiya" address2="Near Saket" city="Ujjain" postalCode="452001"/>
+</entity-facade-xml>

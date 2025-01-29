@@ -1,0 +1,6 @@
+<entity-facade-xml type="demo">
+    <moqui.contactmechpurpose.ContactMechPurpose contactMechPurposeId="WORK" description="work"/>
+    <moqui.contactmechpurpose.ContactMechPurpose contactMechPurposeId="HOME" description="home"/>
+    <moqui.contactmechpurpose.ContactMechPurpose contactMechPurposeId="OFFICE" description="office"/>
+    <moqui.contactmechpurpose.ContactMechPurpose contactMechPurposeId="EmailPrimary" description="EmailPrimary"/>
+</entity-facade-xml>

@@ -1,0 +1,5 @@
+<entity-facade-xml type="demo">
+    <moqui.telecomnumber.TelecomNumber contactMechId="1000" countryCode="01" areaCode="731" contactNumber="98756497"/>
+    <moqui.telecomnumber.TelecomNumber contactMechId="1003" countryCode="02" areaCode="732" contactNumber="48794968"/>
+    <moqui.telecomnumber.TelecomNumber contactMechId="1004" countryCode="03" areaCode="733" contactNumber="98757853"/>
+</entity-facade-xml>

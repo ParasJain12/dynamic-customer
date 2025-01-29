@@ -1,0 +1,12 @@
+<entity-facade-xml type="demo">
+    <moqui.party.Party partyId="PER100" partyTypeEnumId="Person"/>
+    <moqui.party.Party partyId="ORG001" partyTypeEnumId="Organization"/>
+    <moqui.party.Party partyId="ORG002" partyTypeEnumId="Organization"/>
+    <moqui.party.Party partyId="ORG003" partyTypeEnumId="Organization"/>
+    <moqui.party.Party partyId="PER101" partyTypeEnumId="Person"/>
+    <moqui.party.Party partyId="PER102" partyTypeEnumId="Person"/>
+    <moqui.party.Party partyId="PER103" partyTypeEnumId="Person"/>
+    <moqui.party.Party partyId="ORG004" partyTypeEnumId="Organization"/>
+    <moqui.party.Party partyId="PER104" partyTypeEnumId="Person"/>
+    <moqui.party.Party partyId="PER105" partyTypeEnumId="Person"/>
+</entity-facade-xml>

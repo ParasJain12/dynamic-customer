@@ -1,0 +1,8 @@
+<entity-facade-xml type="demo">
+    <moqui.person.Person partyId="PER100" firstName="Aman" lastName="Patel" birthDate="2003-12-12"/>
+    <moqui.person.Person partyId="PER101" firstName="Adarsh" lastName="Sharma" birthDate="2002-10-12"/>
+    <moqui.person.Person partyId="PER102" firstName="Nikita" lastName="Yadav" birthDate="2001-02-02"/>
+    <moqui.person.Person partyId="PER103" firstName="Ojas" lastName="Choukikar" birthDate="2000-10-08"/>
+    <moqui.person.Person partyId="PER104" firstName="Lucky" lastName="Sharma" birthDate="2004-02-09"/>
+    <moqui.person.Person partyId="PER105" firstName="Manas" lastName="Rathore" birthDate="1996-07-26"/>
+</entity-facade-xml>

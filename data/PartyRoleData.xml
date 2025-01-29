@@ -1,0 +1,12 @@
+<entity-facade-xml type="demo">
+    <moqui.partyrole.PartyRole partyId="PER100" roleTypeId="EMPLOYEE"/>
+    <moqui.partyrole.PartyRole partyId="PER101" roleTypeId="CUSTOMER"/>
+    <moqui.partyrole.PartyRole partyId="PER102" roleTypeId="CUSTOMER"/>
+    <moqui.partyrole.PartyRole partyId="PER103" roleTypeId="EMPLOYEE"/>
+    <moqui.partyrole.PartyRole partyId="PER104" roleTypeId="VENDOR"/>
+    <moqui.partyrole.PartyRole partyId="PER105" roleTypeId="EMPLOYEE"/>
+    <moqui.partyrole.PartyRole partyId="ORG001" roleTypeId="VENDOR"/>
+    <moqui.partyrole.PartyRole partyId="ORG002" roleTypeId="EMPLOYEE"/>
+    <moqui.partyrole.PartyRole partyId="ORG003" roleTypeId="CUSTOMER"/>
+    <moqui.partyrole.PartyRole partyId="ORG004" roleTypeId="EMPLOYEE"/>
+</entity-facade-xml>

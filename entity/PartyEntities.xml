@@ -75,9 +75,9 @@
         </relationship>
         <relationship type="one-nofk" related="moqui.telecomnumber.TelecomNumber"/>
         <relationship type="one-nofk" related="moqui.postaladdress.PostalAddress"/>
-        <relationship type="many" related="moqui.partycontactmech.PartyContactMech">
-            <key-map field-name="contactMechId"/>
-        </relationship>
+<!--        <relationship type="many" related="moqui.partycontactmech.PartyContactMech">-->
+<!--            <key-map field-name="contactMechId"/>-->
+<!--        </relationship>-->
 
         <seed-data>
             <moqui.basic.EnumerationType description="Contact Mech Type" enumTypeId="contactMechType" />
@@ -87,8 +87,8 @@
         </seed-data>
         <master>
             <detail relationship="type"/>
-            <detail relationship="TelecomNumber"/>
-            <detail relationship="PostalAddress"/>
+            <detail relationship="telecomnumber"/>
+            <detail relationship="postaladdress"/>
         </master>
     </entity>
 

@@ -1,0 +1,5 @@
+<entity-facade-xml type="demo">
+    <moqui.roletype.RoleType roleTypeId="CUSTOMER" description="Customer"/>
+    <moqui.roletype.RoleType roleTypeId="EMPLOYEE" description="Employee"/>
+    <moqui.roletype.RoleType roleTypeId="VENDOR" description="Vendor"/>
+</entity-facade-xml>
