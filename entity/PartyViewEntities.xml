@@ -7,13 +7,13 @@
         <member-entity entity-alias="PTRL" entity-name="moqui.partyrole.PartyRole" join-from-alias="PTY">
             <key-map field-name="partyId"/>
         </member-entity>
-        <member-entity entity-alias="ORG" entity-name="moqui.organization.Organization" join-from-alias="PTY">
+        <member-entity entity-alias="ORG" entity-name="moqui.organization.Organization" join-from-alias="PTY" join-optional="true">
             <key-map field-name="partyId"/>
         </member-entity>
-        <member-entity entity-alias="PER" entity-name="moqui.person.Person" join-from-alias="PTY">
+        <member-entity entity-alias="PER" entity-name="moqui.person.Person" join-from-alias="PTY" join-optional="true">
             <key-map field-name="partyId"/>
         </member-entity>
-        <member-entity entity-alias="PAPCM" entity-name="moqui.partycontactmech.PartyContactMech" join-from-alias="PTY">
+        <member-entity entity-alias="PAPCM" entity-name="moqui.partycontactmech.PartyContactMech" join-from-alias="PTY" join-optional="true">
             <key-map field-name="partyId"/>
         </member-entity>
         <member-entity entity-alias="PADR" entity-name="moqui.postaladdress.PostalAddress" join-from-alias="PAPCM" join-optional="true">
@@ -22,7 +22,7 @@
         <member-entity entity-alias="TELNM" entity-name="moqui.telecomnumber.TelecomNumber" join-from-alias="PAPCM" join-optional="true">
             <key-map field-name="contactMechId"/>
         </member-entity>
-        <member-entity entity-alias="EMCM" entity-name="moqui.contactmech.ContactMech" join-from-alias="PAPCM">
+        <member-entity entity-alias="EMCM" entity-name="moqui.contactmech.ContactMech" join-from-alias="PAPCM" join-optional="true">
             <key-map field-name="contactMechId"/>
         </member-entity>
 
