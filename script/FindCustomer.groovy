@@ -4,24 +4,35 @@ import org.moqui.entity.EntityFind
 import org.moqui.entity.EntityList
 import org.moqui.entity.EntityValue
 
-ExecutionContext ec = context.e
-EntityFind ef = ec.entity.find("moqui.customerview.FindCustomerView").distinct(true)
+ExecutionContext ec = context.ec
+EntityFind ef = ec.entity.find("moqui.customerview.FindCustomerView")
 
-ef.selectField("partyId")
-if (partyId) { ef.condition(ec.entity.conditionFactory.makeCondition("partyId", EntityCondition.LIKE, (leadingWildcard ? "%" : "") + partyId + "%").ignoreCase()) }
-if (firstName) { ef.condition(ec.entity.conditionFactory.makeCondition("firstName", EntityCondition.LIKE, (leadingWildcard ? "%" : "") + firstName + "%").ignoreCase()) }
-if (lastName) { ef.condition(ec.entity.conditionFactory.makeCondition("lastName", EntityCondition.LIKE, (leadingWildcard ? "%" : "") + lastName + "%").ignoreCase()) }
-if (infoString) { ef.condition(ec.entity.conditionFactory.makeCondition("infoString", EntityCondition.LIKE, (leadingWildcard ? "%" : "") + infoString + "%").ignoreCase()) }
-if (countryCode) { ef.condition(ec.entity.conditionFactory.makeCondition("countryCode", EntityCondition.LIKE, (leadingWildcard ? "%" : "") + countryCode + "%").ignoreCase()) }
-if (areaCode) { ef.condition(ec.entity.conditionFactory.makeCondition("areaCode", EntityCondition.LIKE, (leadingWildcard ? "%" : "") + areaCode + "%").ignoreCase()) }
-if (address1){ ef.condition(ec.entity.conditionFactory.makeCondition("address1", EntityCondition.LIKE, (leadingWildcard ? "%":"") + address1 + "%").ignoreCase())}
-if (address2){ ef.condition(ec.entity.conditionFactory.makeCondition("address2", EntityCondition.LIKE, (leadingWildcard ? "%":"") + address2 + "%").ignoreCase())}
-if (city){ ef.condition(ec.entity.conditionFactory.makeCondition("city", EntityCondition.LIKE, (leadingWildcard ? "%":"") + city + "%").ignoreCase())}
-if (postalCode){ ef.condition(ec.entity.conditionFactory.makeCondition("postalCode", EntityCondition.LIKE, (leadingWildcard ? "%":"") + postalCode + "%").ignoreCase())}
+ef.selectFields()
 
-EntityList el = ef.list()
+if (firstName) { ef.condition('firstName', EntityCondition.LIKE, '%' + firstNameName + '%') }
+if (lastName) { ef.condition('lastName', EntityCondition.LIKE, '%' + lastName + '%') }
+if (contactNumber){ ef.condition('contactNumber', EntityCondition.EQUALS, contactNumber)}
+if (address1){ ef.condition('address1', EntityCondition.LIKE, '%' + address1 + '%')}
+if (address2){ ef.condition('address2', EntityCondition.LIKE, '%' + address2 + '%')}
+if (city){ ef.condition('city', EntityCondition.LIKE, '%' + city + '%')}
+if (postalCode){ ef.condition('postalCode', EntityCondition.EQUALS,  postalCode)}
+if (emailAddress){ ef.condition('infoString',EntityCondition.EQUALS,emailAddress)}
+
+ef.orderBy(firstName + " " + lastName)
+
+if (!pageNoLimit) { ef.offset(pageIndex as int, pageSize as int); ef.limit(pageSize as int) }
+
 partyIdList = []
+EntityList el = ef.list()
 
 for(EntityValue ev in el){
     partyIdList.add(ev.partyId)
 }
+
+partyIdListCount = ef.count()
+partyIdListPageIndex = ef.pageIndex
+partyIdListPageSize = ef.pageSize
+partyIdListPageMaxIndex = ((BigDecimal) (partyIdListCount - 1)).divide(partyIdListPageSize, 0, BigDecimal.ROUND_DOWN) as int
+partyIdListPageRangeLow = partyIdListPageIndex * partyIdListPageSize + 1
+partyIdListPageRangeHigh = (partyIdListPageIndex * partyIdListPageSize) + partyIdListPageSize
+if (partyIdListPageRangeHigh > partyIdListCount) partyIdListPageRangeHigh = partyIdListCount

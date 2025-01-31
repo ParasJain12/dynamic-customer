@@ -9,4 +9,5 @@
     <moqui.party.Party partyId="ORG004" partyTypeEnumId="Organization"/>
     <moqui.party.Party partyId="PER104" partyTypeEnumId="Person"/>
     <moqui.party.Party partyId="PER105" partyTypeEnumId="Person"/>
+    <moqui.party.Party partyId="PER106" partyTypeEnumId="Person"/>
 </entity-facade-xml>

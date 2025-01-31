@@ -15,8 +15,8 @@
 
         <seed-data>
             <moqui.basic.EnumerationType description="Party Type" enumTypeId="PartyType"/>
-            <moqui.basic.Enumeration description="Person" enumId="Person" enumTypeId="Person"/>
-            <moqui.basic.Enumeration description="Organization" enumId="Organization" enumTypeId="Organization"/>
+            <moqui.basic.Enumeration description="Person" enumId="Person" enumTypeId="PartyType"/>
+            <moqui.basic.Enumeration description="Organization" enumId="Organization" enumTypeId="PartyType"/>
         </seed-data>
         <master name="default">
             <detail relationship="type"/>
@@ -57,12 +57,6 @@
     <entity entity-name="RoleType" package="moqui.roletype">
         <field name="roleTypeId" type="id" is-pk="true"/>
         <field name="description" type="text-medium"/>
-
-        <seed-data>
-            <moqui.roletype.RoleType roleTypeId="CUSTOMER" description="Customer"/>
-            <moqui.roletype.RoleType roleTypeId="EMPLOYEE" description="Employee"/>
-            <moqui.roletype.RoleType roleTypeId="VENDOR" description="Vendor"/>
-        </seed-data>
     </entity>
 
     <entity entity-name="ContactMech" package="moqui.contactmech">

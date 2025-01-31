@@ -6,4 +6,5 @@
     <moqui.partycontactmech.PartyContactMech partyId="ORG001" contactMechId="1004" contactMechPurposeId="WORK" fromDate="2024-04-08" thruDate="2024-11-09"/>
     <moqui.partycontactmech.PartyContactMech partyId="ORG002" contactMechId="1005" contactMechPurposeId="WORK" fromDate="2008-05-18" thruDate="2019-12-15"/>
     <moqui.partycontactmech.PartyContactMech partyId="ORG003" contactMechId="1006" contactMechPurposeId="OFFICE" fromDate="2017-06-09" thruDate="2018-05-30"/>
+    <moqui.partycontactmech.PartyContactMech partyId="PER106" contactMechId="1008" contactMechPurposeId="EmailPrimary" fromDate="2020-08-16" thruDate="2023-09-18"/>
 </entity-facade-xml>

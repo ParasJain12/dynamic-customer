@@ -4,27 +4,31 @@
 
     <view-entity entity-name="FindCustomerView" package="moqui.customerview">
         <member-entity entity-alias="PTY" entity-name="moqui.party.Party"/>
-        <member-entity entity-alias="PTRL" entity-name="moqui.partyrole.PartyRole" join-from-alias="PTY">
-            <key-map field-name="partyId"/>
-        </member-entity>
         <member-entity entity-alias="ORG" entity-name="moqui.organization.Organization" join-from-alias="PTY" join-optional="true">
             <key-map field-name="partyId"/>
         </member-entity>
         <member-entity entity-alias="PER" entity-name="moqui.person.Person" join-from-alias="PTY" join-optional="true">
             <key-map field-name="partyId"/>
         </member-entity>
-        <member-entity entity-alias="PAPCM" entity-name="moqui.partycontactmech.PartyContactMech" join-from-alias="PTY" join-optional="true">
+        <member-entity entity-alias="PTRL" entity-name="moqui.partyrole.PartyRole" join-from-alias="PTY" join-optional="true">
             <key-map field-name="partyId"/>
         </member-entity>
-        <member-entity entity-alias="PADR" entity-name="moqui.postaladdress.PostalAddress" join-from-alias="PAPCM" join-optional="true">
-            <key-map field-name="contactMechId"/>
-        </member-entity>
-        <member-entity entity-alias="TELNM" entity-name="moqui.telecomnumber.TelecomNumber" join-from-alias="PAPCM" join-optional="true">
-            <key-map field-name="contactMechId"/>
+        <member-entity entity-alias="PAPCM" entity-name="moqui.partycontactmech.PartyContactMech" join-from-alias="PTRL" join-optional="true">
+            <key-map field-name="partyId"/>
         </member-entity>
         <member-entity entity-alias="EMCM" entity-name="moqui.contactmech.ContactMech" join-from-alias="PAPCM" join-optional="true">
             <key-map field-name="contactMechId"/>
         </member-entity>
+        <member-entity entity-alias="PCMP" entity-name="moqui.contactmechpurpose.ContactMechPurpose" join-from-alias="PAPCM" join-optional="true">
+            <key-map field-name="contactMechPurposeId"/>
+        </member-entity>
+        <member-entity entity-alias="PADR" entity-name="moqui.postaladdress.PostalAddress" join-from-alias="EMCM" join-optional="true">
+            <key-map field-name="contactMechId"/>
+        </member-entity>
+        <member-entity entity-alias="TELNM" entity-name="moqui.telecomnumber.TelecomNumber" join-from-alias="EMCM" join-optional="true">
+            <key-map field-name="contactMechId"/>
+        </member-entity>
+
 
         <alias entity-alias="PTY" name="partyId"/>
         <alias entity-alias="PTY" name="partyTypeEnumId"/>
@@ -40,6 +44,13 @@
         <alias entity-alias="TELNM" name="countryCode"/>
         <alias entity-alias="TELNM" name="areaCode"/>
         <alias entity-alias="TELNM" name="contactNumber"/>
+        <alias entity-alias="EMCM" name="infoString"/>
+        <alias entity-alias="PAPCM" name="thruDate"/>
+        <alias entity-alias="PCMP" name="contactMechPurposeId"/>
+
+        <entity-condition>
+            <econdition entity-alias="PTRL" field-name="roleTypeId" operator="equals" value="Customer"/>
+        </entity-condition>
 
     </view-entity>
 

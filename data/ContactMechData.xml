@@ -7,4 +7,5 @@
     <moqui.contactmech.ContactMech contactMechId="1005" contactMechTypeEnumId="PostalAddress"/>
     <moqui.contactmech.ContactMech contactMechId="1006" contactMechTypeEnumId="PostalAddress"/>
     <moqui.contactmech.ContactMech contactMechId="1007" contactMechTypeEnumId="EmailAddress" infoString="example@gmail.com"/>
+    <moqui.contactmech.ContactMech contactMechId="1008" contactMechTypeEnumId="EmailAddress" infoString="ex@gmail.com"/>
 </entity-facade-xml>

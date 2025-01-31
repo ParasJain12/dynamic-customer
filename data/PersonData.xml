@@ -5,4 +5,5 @@
     <moqui.person.Person partyId="PER103" firstName="Ojas" lastName="Choukikar" birthDate="2000-10-08"/>
     <moqui.person.Person partyId="PER104" firstName="Lucky" lastName="Sharma" birthDate="2004-02-09"/>
     <moqui.person.Person partyId="PER105" firstName="Manas" lastName="Rathore" birthDate="1996-07-26"/>
+    <moqui.person.Person partyId="PER106" firstName="Om" lastName="Baraskar" birthDate="1995-08-13"/>
 </entity-facade-xml>

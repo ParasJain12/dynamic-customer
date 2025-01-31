@@ -2,21 +2,56 @@
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:noNamespaceSchema="http://moqui.org/service-definition-3.xsd">
 
-    <service verb="find" noun="Customer" type="script" location="component://dynamic-customer/script/FindCustomer.groovy">
+    <service verb="find" noun="FindCustomerView" type="script" location="component://dynamic-customer/script/FindCustomer.groovy">
         <in-parameters>
-            <parameter name="firstName" entity="moqui.customerview.FindCustomerView"/>
-            <parameter name="lastName" entity="moqui.customerview.FindCustomerView"/>
-            <parameter name="infoString" entity="moqui.customerview.FindCustomerView"/>
-            <parameter name="contactNumber" entity="moqui.customerview.FindCustomerView"/>
-            <parameter name="countryCode" entity="moqui.customerview.FindCustomerView"/>
-            <parameter name="areaCode" entity="moqui.customerview.FindCustomerView"/>
-            <parameter name="address1" entity="moqui.customerview.FindCustomerView"/>
-            <parameter name="address2" entity="moqui.customerview.FindCustomerView"/>
-            <parameter name="city" entity="moqui.customerview.FindCustomerView"/>
-            <parameter name="postalCode" entity="moqui.customerview.FindCustomerView"/>
+            <parameter name="firstName"/>
+            <parameter name="lastName" />
+            <parameter name="contactNumber"/>
+            <parameter name="emailAddress"/>
+            <parameter name="address1"/>
+            <parameter name="address2"/>
+            <parameter name="city" />
+            <parameter name="postalCode"/>
+            <parameter name="pageIndex" type="Integer" default="0"/>
+            <parameter name="pageSize" type="Integer" default="20"/>
+            <parameter name="pageNoLimit" type="Boolean" default="false"/>
+            <parameter name="leadingWildCard" type="Boolean" default="false"/>
         </in-parameters>
         <out-parameters>
             <parameter name="partyIdList" type="list"/>
+            <parameter name="partyIdListCount" type="Integer"/>
+            <parameter name="partyIdListPageIndex" type="Integer"/>
+            <parameter name="partyIdListPageSize" type="Integer"/>
+            <parameter name="partyIdListPageMaxIndex" type="Integer"/>
+            <parameter name="partyIdListPageRangeLow" type="Integer"/>
+            <parameter name="partyIdListPageRangeHigh" type="Integer"/>
+        </out-parameters>
+    </service>
+
+    <service verb="create" noun="FindCustomerView" type="script" location="component://dynamic-customer/script/CreateCustomer.groovy">
+        <in-parameters>
+            <parameter name="emailAddress"/>
+            <parameter name="firstName"/>
+            <parameter name="lastName"/>
+        </in-parameters>
+        <out-parameters>
+            <parameter name="partyId"/>
+        </out-parameters>
+    </service>
+
+    <service verb="store" noun="FindCustomerView" type="script" location="component://dynamic-customer/script/UpdateCustomer.groovy">
+        <in-parameters>
+            <parameter name="emailAddress" required="true"/>
+            <parameter name="postalCode"/>
+            <parameter name="contactNumber"/>
+            <parameter name="toName"/>
+            <parameter name="attName"/>
+            <parameter name="address1"/>
+            <parameter name="address2"/>
+            <parameter name="city"/>
+        </in-parameters>
+        <out-parameters>
+            <parameter name="emailAddress"/>
         </out-parameters>
     </service>
 </services>

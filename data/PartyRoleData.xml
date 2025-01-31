@@ -9,4 +9,5 @@
     <moqui.partyrole.PartyRole partyId="ORG002" roleTypeId="EMPLOYEE"/>
     <moqui.partyrole.PartyRole partyId="ORG003" roleTypeId="CUSTOMER"/>
     <moqui.partyrole.PartyRole partyId="ORG004" roleTypeId="EMPLOYEE"/>
+    <moqui.partyrole.PartyRole partyId="PER106" roleTypeId="CUSTOMER"/>
 </entity-facade-xml>
